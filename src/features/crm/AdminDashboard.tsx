@@ -1,3 +1,9 @@
+import { AgentLeaderboard } from './charts/AgentLeaderboard';
+import { BlockInventoryChart } from './charts/BlockInventoryChart';
+import { CollectionGauge } from './charts/CollectionGauge';
+import { LeadSourceChart } from './charts/LeadSourceChart';
+import { SalesTrendChart } from './charts/SalesTrendChart';
+import { WeeklyVisitsChart } from './charts/WeeklyVisitsChart';
 import { useApp } from '@/context/AppContext';
 
 const INVENTORY = [
@@ -130,6 +136,20 @@ export function AdminDashboard() {
             </div>
           </div>
         </div>
+
+        <SalesTrendChart />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <BlockInventoryChart />
+          <CollectionGauge />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <LeadSourceChart />
+          <WeeklyVisitsChart />
+        </div>
+
+        <AgentLeaderboard />
       </div>
     </>
   );

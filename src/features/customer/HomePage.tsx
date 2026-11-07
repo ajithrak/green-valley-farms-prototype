@@ -1,4 +1,12 @@
 import { Icon } from '@/components/ui/Icon';
+import { Amenities } from './home/Amenities';
+import { CtaBanner } from './home/CtaBanner';
+import { Faq } from './home/Faq';
+import { FeaturedPlots } from './home/FeaturedPlots';
+import { HowItWorks } from './home/HowItWorks';
+import { Location } from './home/Location';
+import { PlotSizes } from './home/PlotSizes';
+import { StatsStrip } from './home/StatsStrip';
 import { useApp } from '@/context/AppContext';
 
 export function HomePage() {
@@ -33,7 +41,7 @@ export function HomePage() {
                   <strong className="text-xl font-bold text-emerald-700">
                     {plots.filter((p) => p.status === 'available').length} Plots Open
                   </strong>
-                  <span className="text-xs text-gray-500 block">Out of 40 Total</span>
+                  <span className="text-xs text-gray-500 block">Out of {plots.length} Total</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -117,6 +125,15 @@ export function HomePage() {
             ))}
           </div>
         </section>
+
+        <StatsStrip />
+        <FeaturedPlots />
+        <Amenities />
+        <HowItWorks />
+        <PlotSizes />
+        <Location />
+        <Faq />
+        <CtaBanner />
       </div>
     </>
   );

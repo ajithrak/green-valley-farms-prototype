@@ -5,3 +5,5 @@ export * from './hierarchy';
 export * from './offers';
 export * from './visits';
 export * from './timeline';
+export * from './analytics';
+export * from './content';
