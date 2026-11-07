@@ -1,1 +1,14 @@
-export default {darkMode:'class',content:['./index.html','./src/**/*.{ts,tsx}'],theme:{extend:{}},plugins:[]}
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'Cambria', 'serif'],
+      },
+    },
+  },
+  plugins: [],
+};
